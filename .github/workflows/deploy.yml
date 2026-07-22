@@ -19,7 +19,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE: ghcr.io/pilanderinc/PROJECT_NAME
+  IMAGE: ghcr.io/pilander/PROJECT_NAME
   BUILD_CONTEXT: .
 
 jobs:

@@ -61,6 +61,6 @@ npm test           # TODO
 
 ## Deployment notes
 
-- Push to `main` → Actions builds & pushes `ghcr.io/pilanderinc/<slug>:latest` →
+- Push to `main` → Actions builds & pushes `ghcr.io/pilander<slug>:latest` →
   Watchtower redeploys. See `README.md` for the full one-time bootstrap.
 - `TODO` — project-specific deploy quirks, if any.

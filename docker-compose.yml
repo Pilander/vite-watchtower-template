@@ -1,6 +1,6 @@
 services:
   PROJECT_NAME:
-    image: ghcr.io/pilanderinc/PROJECT_NAME:latest
+    image: ghcr.io/pilander/PROJECT_NAME:latest
     container_name: PROJECT_NAME
     restart: unless-stopped
     networks:

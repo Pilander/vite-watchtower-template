@@ -6,7 +6,7 @@ builds a Docker image, pushes it to GHCR, and pings Watchtower, which
 auto-redeploys the container.
 
 ```
-push to main → Actions builds image → ghcr.io/pilanderinc/<project> → Watchtower redeploys
+push to main → Actions builds image → ghcr.io/pilander/<project> → Watchtower redeploys
 ```
 
 ---
@@ -31,7 +31,7 @@ push to main → Actions builds image → ghcr.io/pilanderinc/<project> → Watc
 
 ### 1. Create the repo from this template
 GitHub → **New repository** → **Repository template** → `vite-watchtower-template`.
-Create it under the **PilanderInc** org. **Public** is recommended (see
+Create it under the **Pilander** org. **Public** is recommended (see
 [Public vs private](#public-vs-private-packages) below).
 
 ### 2. Replace the `PROJECT_NAME` placeholder
@@ -58,20 +58,20 @@ into it.
 ### 4. Secrets
 The workflow needs `WATCHTOWER_URL` and `WATCHTOWER_TOKEN`:
 
-- **Public repo** → inherited from **PilanderInc org secrets** automatically. ✅
+- **Public repo** → inherited from **Pilander org secrets** automatically. ✅
   Nothing to do.
 - **Private repo** → org secrets do **not** reach private repos on the Free
   plan. Set them per-repo:
   ```bash
-  gh secret set WATCHTOWER_URL   --repo PilanderInc/<repo> --body "https://watchtower.pilander.com"
-  gh secret set WATCHTOWER_TOKEN --repo PilanderInc/<repo> --body "<token>"
+  gh secret set WATCHTOWER_URL   --repo Pilander/<repo> --body "https://watchtower.pilander.com"
+  gh secret set WATCHTOWER_TOKEN --repo Pilander/<repo> --body "<token>"
   ```
 
 ### 5. Push
 ```bash
 git add -A && git commit -m "Initial commit" && git push origin main
 ```
-Watch the Action: it builds, pushes `ghcr.io/pilanderinc/<project>:latest`, and
+Watch the Action: it builds, pushes `ghcr.io/pilander/<project>:latest`, and
 triggers Watchtower.
 
 ### 6. Deploy on the server (first time only)
@@ -107,7 +107,7 @@ three separate credential stores, for no security benefit on a static site.
 > those into the public client bundle at build time regardless of package
 > visibility.
 
-To set a package public: **PilanderInc → Packages → `<project>` → Package
+To set a package public: **Pilander → Packages → `<project>` → Package
 settings → Change visibility → Public.**
 
 ---

@@ -3,14 +3,14 @@ name: Build & Deploy
 # ─────────────────────────────────────────────────────────────────────────────
 # SETUP (one-time per new repo):
 #   1. Change PROJECT_NAME below to your project's slug (lowercase, no spaces).
-#      This becomes the image name: ghcr.io/pilanderinc/PROJECT_NAME
+#      This becomes the image name: ghcr.io/pilander/PROJECT_NAME
 #   2. If your app lives in a subdirectory (e.g. frontend/), set BUILD_CONTEXT.
 #      Default is the repo root (".").
 #   3. Ensure WATCHTOWER_URL / WATCHTOWER_TOKEN are available as secrets:
-#        - Public repo → inherited from PilanderInc org secrets automatically.
+#        - Public repo → inherited from Pilander org secrets automatically.
 #        - Private repo → set per-repo:
-#            gh secret set WATCHTOWER_URL   --repo PilanderInc/<repo> --body "https://watchtower.pilander.com"
-#            gh secret set WATCHTOWER_TOKEN --repo PilanderInc/<repo> --body "<token>"
+#            gh secret set WATCHTOWER_URL   --repo Pilander/<repo> --body "https://watchtower.pilander.com"
+#            gh secret set WATCHTOWER_TOKEN --repo Pilander/<repo> --body "<token>"
 # ─────────────────────────────────────────────────────────────────────────────
 
 on:
@@ -19,7 +19,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE: ghcr.io/pilanderinc/PROJECT_NAME
+  IMAGE: ghcr.io/pilander/PROJECT_NAME
   BUILD_CONTEXT: .
 
 jobs:

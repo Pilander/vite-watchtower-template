@@ -3,6 +3,10 @@ services:
     image: ghcr.io/pilander/PROJECT_NAME:latest
     container_name: PROJECT_NAME
     restart: unless-stopped
+    volumes:
+      - /mnt/pool/apps/dockge/example:/example
+    environment:
+      example: ${example}
     networks:
       - proxy
     labels:
